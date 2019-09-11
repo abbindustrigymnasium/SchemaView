@@ -16,6 +16,7 @@
       iframe{
         overflow:hidden;
         border:0;
+        background:white;
       }
 
       body
@@ -23,6 +24,7 @@
     position: fixed; 
     overflow-y: hidden;
     width: 100%;
+    background:#faf9f7;
 
 }
 .hide{
@@ -47,9 +49,9 @@ margin-left: 40%;
     </style>
     <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
     <script >
-let tvåor="https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri.html?h=f&sid=3&p=0.m%2C0.w&objects=2990.8&ox=0&types=0&fe=0&hsid=t&h2=2";
-let ettor= "https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri.html?h=f&sid=3&p=0.m%2C0.w&objects=2970.8&ox=0&types=0&fe=0&cs=f&h2=2";
-window.onload = bytbild();
+// let tvåor="https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri.html?h=f&sid=3&p=0.m%2C0.w&objects=2990.8&ox=0&types=0&fe=0&hsid=t&h2=2";
+// let ettor= "https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri.html?h=f&sid=3&p=0.m%2C0.w&objects=2970.8&ox=0&types=0&fe=0&cs=f&h2=2";
+ window.onload = bytbild();
 let one=true;
 
 
@@ -65,17 +67,18 @@ setInterval(function(){
         tvåor.className = "hide";
         ettor.className = "";
         one= false;
-         klass.innerHTML= "Schema för <span class='tvåor'>180S</span> <span class='tillfällig'>Tillfällig sida tills någon gör en bättre!</span>";
-     } 
+        klass.innerHTML= "Schema för <span class='ettor'>190S</span>   <span class='tillfällig'>Tillfällig sida tills någon gör en bättre!</span>";
+        } 
      else {
         // frame.src= ettor; 
         tvåor.className = "";
         ettor.className = "hide"; 
         one=true;
-        klass.innerHTML= "Schema för <span class='ettor'>190S</span>   <span class='tillfällig'>Tillfällig sida tills någon gör en bättre!</span>";
-        
+           
+         klass.innerHTML= "Schema för <span class='tvåor'>180S</span> <span class='tillfällig'>Tillfällig sida tills någon gör en bättre!</span>";
+
      }
-      }, 3000);
+      }, 10000);
 }
     </script>
 </head>
