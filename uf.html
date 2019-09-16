@@ -24,8 +24,12 @@
 
         #powerpoint {
             display: inline-block;
-
-
+            position:absolute; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;
+            display: block;       /* iframes are inline by default */
+    background: #000;
+    border: none;         /* Reset default border */
+    height: 100vh;        /* Viewport-relative units */
+    width: 100vw;
         }
     </style>
     <script>
@@ -60,8 +64,9 @@
 
 
         <iframe
-            src="https://docs.google.com/presentation/d/e/2PACX-1vQBMo8RjeJAKPyv0t8RkOEV9TEnvgHwbJRrhKh_F0TPfZ8qXJm3BoF6U29cv6Gc_p_kVEhcvU8pz-0z/embed?start=true&loop=true&delayms=3000"
-            frameborder="0" width="1440" height="839" allowfullscreen="true" mozallowfullscreen="true"
+        id="powerpoint"
+            src="https://docs.google.com/presentation/d/e/2PACX-1vQBMo8RjeJAKPyv0t8RkOEV9TEnvgHwbJRrhKh_F0TPfZ8qXJm3BoF6U29cv6Gc_p_kVEhcvU8pz-0z/embed?start=true&loop=true&delayms=8000&rm=minimal" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"
+            frameborder="0"  allowfullscreen="true" mozallowfullscreen="true"
             webkitallowfullscreen="true" rm=minimal ></iframe>
     </div>
     <img
