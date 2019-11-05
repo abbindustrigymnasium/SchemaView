@@ -1,0 +1,60 @@
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3,calc(100vw/3));
+    grid-template-rows: repeat(1,100vh);
+   
+}
+
+.box {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+}
+
+/* #time {
+    text-align: center;
+    align-self: center;
+    font-size: 100px;
+} */
+
+#timeEditIFrame {
+    z-index: 0;
+}
+
+
+.lessons {
+    font-size: 24px;
+
+}
+
+#coverDiv {
+    left: 0px;
+    position: absolute;
+    text-align: center;
+    background: white;
+    width: 100%;
+    
+    z-index: 1;
+}
+
+.currentLesson{
+    color: green;
+}
+
+#time{
+    margin-bottom: 0px;
+}
+
+#timeEditInfo{
+    font-size: 24px;
+}
+
+h1 {
+    font-size: 75px;
+}
+
+h3 {
+    font-size: 32px;
+}

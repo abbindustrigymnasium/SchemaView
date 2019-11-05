@@ -1,154 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Schema</title>
-    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <style>
-        h1 {
-      
-    font-family: 'Anton', sans-serif;
-    margin-bottom: 5px;
-        font-size: 36px;
-      }
-      iframe{
-        overflow:hidden;
-        border:0;
-        background:white;
-      }
-      body
-{
-    position: fixed; 
-    overflow-y: hidden;
-    width: 100%;
-    background:#faf9f7;
-}
-.hide{
-    display: none;
-}
-.ettor{
-    font-size: 46px;
-    color: goldenrod;
-}
-.tvåor{
-    font-size: 46px;
-    color: red;
-}
-.hallon{
-    font-size: 46px;
-    color: purple;
-}
-.vaxt{
-    font-size: 46px;
-    color: green;
-}
-.tillfällig{
-    font-size: 26px;
-    color: blue;
-text-align: right;
-margin-left: 40%;
-}
-    </style>
-    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
-    <script >
-// let tvåor="https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri.html?h=f&sid=3&p=0.m%2C0.w&objects=2990.8&ox=0&types=0&fe=0&hsid=t&h2=2";
-// let ettor= "https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri.html?h=f&sid=3&p=0.m%2C0.w&objects=2970.8&ox=0&types=0&fe=0&cs=f&h2=2";
- window.onload = bytbild();
-let counter=0;
-
-function bytbild() {
-setInterval(function(){
-     let ettor= document.getElementById("ettor");   
-     let tvåor= document.getElementById("tvåor"); 
-     let hallon= document.getElementById("hallon");   
-     let vaxt= document.getElementById("vaxt");    
-      let klass= document.getElementById("klass");
-     
-      var d = new Date();
-  var n = d.getHours();
-      if(n==4){
-     tvåor.src= "";
-     ettor.src= "";
-     tvåor.src= "https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri.html?h=f&sid=3&p=0.m%2C0.w&objects=2990.8&ox=0&types=0&fe=0&hsid=t&h2=2";
-     ettor.src= "https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri.html?h=f&sid=3&p=0.m%2C0.w&objects=2970.8&ox=0&types=0&fe=0&cs=f&h2=2";
-     }
-        
-     tvåor.className = "hide";
-     ettor.className = "hide";
-     vaxt.className = "hide";
-     hallon.className = "hide";
-
-      if (counter==0 ||counter==1 || counter==6 ||counter==7) {
-        ettor.className = "";
-        klass.innerHTML= "Schema för <span class='ettor'>190S</span>   <span class='tillfällig'>Tillfällig sida tills någon gör en bättre!</span>";
-        } 
-     else if (counter==2 ||counter==3|| counter==8 ||counter==9) {
-        tvåor.className = "";
-           
-         klass.innerHTML= "Schema för <span class='tvåor'>180S</span> <span class='tillfällig'>Tillfällig sida tills någon gör en bättre!</span>";
-     }
-     else if (counter==4) {
-        hallon.className = "";
-           
-         klass.innerHTML= "Schema för <span class='hallon'>Hallonrummet</span> <span class='tillfällig'>Tillfällig sida tills någon gör en bättre!</span>";
-     }
-     else if (counter==5) {
-        vaxt.className = "";           
-         klass.innerHTML= "Schema för <span class='vaxt'>Växtrummet</span> <span class='tillfällig'>Tillfällig sida tills någon gör en bättre!</span>";
-     }
-
-     counter++;
-if(counter>9)
-counter=0;
-    //  console.log(counter)
-      }, 5000);
-
-      
-}
-    </script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
-<body 
-scrolling="no">
+<body>
+    <main>
+        <div class="box" id='180s'>
+            <h1>Klass 180s</h1>
+            <h3 class="currentLesson"></h3>
+            <h3 class="break"></h3>
+            <h3>Lektioner idag: </h3>
+            <div class="lessons"></div>
+        </div>
 
+        <!-- <div class="box" id="time">
+        </div> -->
 
-    <h1 id="klass">Schema för <span class='tvåor'>180S</span></h1>
-    <iframe id="ettor"
-    class="hide"
-    title="Inline Frame"
-    width="100%"
-    height="800"
-    scrolling="no"
-    src="https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri.html?h=f&sid=3&p=0.m%2C0.w&objects=2970.8&ox=0&types=0&fe=0&cs=f&h2=2">
-</iframe>
+        <div class=".box">
+            <div id="coverDiv"><h1 id="time"></h1><p id="timeEditInfo"></p></div>
+            <iframe scrolling='no' id="timeEditIFrame" src="" width="100%" height="100%" frameborder="0"></iframe>
+        </div>
+    
+        <div class="box" id="190s">
+          
+            <h1>Klass 190s</h1>
+            <h3 class="currentLesson"></h3>
+            <h3 class="break"></h3>
+            <h3>Lektioner idag: </h3>
+            <div class="lessons"></div>
+        </div>
 
-    <iframe id="tvåor"
-    title="Inline Frame"
-    width="100%"
-    height="800"
-    scrolling="no"
-    src="https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri.html?h=f&sid=3&p=0.m%2C0.w&objects=2990.8&ox=0&types=0&fe=0&hsid=t&h2=2">
-</iframe>
+    </main>
 
-<iframe id="hallon"
-title="Inline Frame"
-    class="hide"
-width="100%"
-height="800"
-scrolling="no"
-src="https://outlook.office365.com/owa/calendar/68bd52b6a8cb4f7ebf6d93402e41704b@abbindustrigymnasium.se/208a1fe6c3e14238bb4de2822ff8ea777430244437306245871/calendar.html">
-</iframe>
-
-<iframe id="vaxt"
-class="hide"
-title="Inline Frame"
-width="100%"
-height="800"
-scrolling="no"
-src="https://outlook.office365.com/owa/calendar/15b55814a3394d5282d6d3b100241004@abbindustrigymnasium.se/757180140a744d5b987b02de0feae27f15809010834951526728/calendar.html">
-</iframe>
-
-
+    
 </body>
 </html>
