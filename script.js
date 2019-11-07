@@ -13,7 +13,7 @@ function calcDiff(date1,date2){
     //console.log(parseFloat("0."+h_m_array[1])*60)
     if (parseInt(h_m_array[0]) > 0  || h_m_array[0].slice(0,1) != '-'){
         console.log('Diff',parseInt(h_m_array[0]) + "h",Math.ceil(((parseFloat("0."+h_m_array[1])*60))) + "m")
-        return parseInt(h_m_array[0]) + "h" + " " + Math.ceil((parseFloat("0."+h_m_array[1])*60)) + "m"
+        return parseInt(h_m_array[0]+1) + "h" + " " + Math.ceil((parseFloat("0."+h_m_array[1])*60)) + "m"
     } else {
         return false
     }
@@ -39,22 +39,33 @@ function renderNextLessons(lesson, time, div){
 }
 
 function currentLesson(lesson, startTime, currentDate, endTime, div){
+    console.log(div)
     if (startTime <= currentDate && currentDate < endTime){
         console.log("current är", lesson.columns[1])
         console.log(div)
-        console.log(div.getElementsByClassName('currentLesson'))
+        console.log(div.getElementsByClassName('currentLesson').innerText)
         
             if (lesson.columns[4] != ""){
-                div.getElementsByClassName('currentLesson')[0].innerText = "Lektion just nu: " + (lesson.columns[1].includes("Moderna")) === true ? "Moderna Språk" :  lesson.columns[1]  + " i " + lesson.columns[4]
+                if ((lesson.columns[1].includes("Moderna")) === true){
+                    div.getElementsByClassName('currentLesson')[0].innerText = "Lektion just nu: " + "Moderna Språk" + " i " + lesson.columns[4]
+                } else{
+                    div.getElementsByClassName('currentLesson')[0].innerText = "Lektion just nu: " + lesson.columns[4]
+                }
+
             } else {
-                div.getElementsByClassName('currentLesson')[0].innerText = "Lektion just nu: " +( lesson.columns[1].includes("Moderna") === true) ? "Moderna Språk" :  lesson.columns[1]
-            }
+                if ((lesson.columns[1].includes("Moderna")) === true){
+                    div.getElementsByClassName('currentLesson')[0].innerText = "Lektion just nu: " + "Moderna Språk"
+                } else{
+                    div.getElementsByClassName('currentLesson')[0].innerText = "Lektion just nu: " + lesson.columns[4]
+                }
+                }
         div.getElementsByClassName('break')[0].innerText = "Lektionen slutar om: " + calcDiff(endTime, currentDate)
     }
 
 }
 
 function nextLesson(lessons, div){
+    var moderna = false
     lessons.forEach(element => {
         
         var currentDate = today()
@@ -78,8 +89,17 @@ function nextLesson(lessons, div){
                 renderNextLessons(element, timeDiff, div)         
                 
             }   
+            if (element.columns[1].includes("Moderna") && moderna === false){
 
-            currentLesson(element, startTime, currentDate, endTime, div)
+                console.log(element, moderna)
+                moderna = true
+                currentLesson(element, startTime, currentDate, endTime, div)
+                
+            } else if (!element.columns[1].includes("Moderna")){
+                console.log(element, moderna)
+                currentLesson(element, startTime, currentDate, endTime, div)
+            }   
+                
 
             // tid till rast
             
@@ -130,7 +150,7 @@ let switchTimeEdit = false
 function startTime() {
 
     var today = new Date();
-    var h = today.getHours();
+    var h = today.getHours()+1;
     var m = today.getMinutes();
     //console.log(m)
     m = checkTime(m);
