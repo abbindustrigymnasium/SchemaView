@@ -50,14 +50,14 @@ function currentLesson(lesson, startTime, currentDate, endTime, div){
                 if ((lesson.columns[1].includes("Moderna")) === true){
                     div.getElementsByClassName('currentLesson')[0].innerText = "Lektion just nu: " + "Moderna Språk" + " i " + lesson.columns[4]
                 } else{
-                    div.getElementsByClassName('currentLesson')[0].innerText = "Lektion just nu: " + lesson.columns[2]
+                    div.getElementsByClassName('currentLesson')[0].innerText = "Lektion just nu: " + lesson.columns[1]
                 }
 
             } else {
                 if ((lesson.columns[1].includes("Moderna")) === true){
                     div.getElementsByClassName('currentLesson')[0].innerText = "Lektion just nu: " + "Moderna Språk"
                 } else{
-                    div.getElementsByClassName('currentLesson')[0].innerText = "Lektion just nu: " + lesson.columns[2]
+                    div.getElementsByClassName('currentLesson')[0].innerText = "Lektion just nu: " + lesson.columns[1]
                 }
             }
         div.getElementsByClassName('break')[0].innerText = "Lektionen slutar om: " + calcDiff(endTime, currentDate)
@@ -162,12 +162,14 @@ function startTime() {
         doEverything("190s", "https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri627Q5Q750ZQ4Q5Y36Q7Zn6y4Z0.json")
         
         if (switchTimeEdit == false){
-            document.getElementById('timeEditIFrame').src = 'https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri1Y7X3QQQfZY6QfZ5064405y7Y7.html'
+            document.getElementById('180sFrame').style.display ="block"
+            document.getElementById('190sFrame').style.display ="none"
             document.getElementById('timeEditInfo').innerText = '180s' 
             switchTimeEdit = true
         } 
         else {
-            document.getElementById('timeEditIFrame').src = 'https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri1Y7X3QQQfZY6QfZ5064205y7Y7.html'
+            document.getElementById('180sFrame').style.display ="none"
+            document.getElementById('190sFrame').style.display ="block"
             document.getElementById('timeEditInfo').innerText = '190s' 
             switchTimeEdit = false
         }
