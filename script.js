@@ -181,7 +181,7 @@ function startTime() {
     
     
     document.getElementById('time').innerText = h + ":" + m;
-    var t = setTimeout(startTime, 500);
+    var t = setTimeout(startTime, 15000);
     latestMin = m
 }
 function checkTime(i) {
