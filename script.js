@@ -1,4 +1,5 @@
 
+
 function today(){
     var wintertime = new Date().toLocaleString("se-SWE",{timeZone:'Europe/Stockholm'})
     //console.log(new Date(wintertime).toLocaleDateString())
@@ -150,6 +151,8 @@ let latestMin = 1299
 let switchTimeEdit = false
 function startTime() {
 
+    
+
     var today = new Date(new Date().toLocaleString("se-SWE",{timeZone:'Europe/Stockholm'}))
     var h = today.getHours();
     var m = today.getMinutes();
@@ -158,8 +161,8 @@ function startTime() {
     
     if (latestMin != m){
         clear()
-        doEverything("180s", "https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri1Y7X3QQQfZY6QfZ5064405y7Y7.json")
-        doEverything("190s", "https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri627Q5Q750ZQ4Q5Y36Q7Zn6y4Z0.json")
+        doEverything("180s", "180s.json")
+        doEverything("190s", "190s.json")
         
         if (switchTimeEdit == false){
             document.getElementById('180sFrame').style.display ="block"

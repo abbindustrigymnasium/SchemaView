@@ -1,0 +1,657 @@
+{
+    "columnheaders": [
+        "Klass",
+        "Kurs",
+        "Info",
+        "Lärare",
+        "Sal",
+        "Aktivitet",
+        ""
+    ],
+    "info": {
+        "reservationlimit": 200,
+        "reservationcount": 40
+    },
+    "reservations": [
+        {
+            "id": "62039",
+            "startdate": "2019-11-04",
+            "starttime": "08:10",
+            "enddate": "2019-11-04",
+            "endtime": "09:30",
+            "columns": [
+                "TE V1901, TES V190S",
+                "Moderna språk 3 Spanska",
+                "",
+                "Smeds, Mariella",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62043",
+            "startdate": "2019-11-04",
+            "starttime": "08:10",
+            "enddate": "2019-11-04",
+            "endtime": "09:30",
+            "columns": [
+                "TE V1901-1903, TES V190S",
+                "Moderna språk 3 Tyska",
+                "",
+                "Frimmel, Helena",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "64596",
+            "startdate": "2019-11-04",
+            "starttime": "08:10",
+            "enddate": "2019-11-04",
+            "endtime": "09:30",
+            "columns": [
+                "TE V1901-1903, TES V190S",
+                "Moderna språk 3 Franska",
+                "",
+                "Moberg Paganelli, Stella",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62331",
+            "startdate": "2019-11-04",
+            "starttime": "09:45",
+            "enddate": "2019-11-04",
+            "endtime": "10:50",
+            "columns": [
+                "TES V190S",
+                "Matematik 1c",
+                "4.1 geometri & algebra",
+                "Hallberg, Anna",
+                "Klassrummet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62356",
+            "startdate": "2019-11-04",
+            "starttime": "12:05",
+            "enddate": "2019-11-04",
+            "endtime": "14:15",
+            "columns": [
+                "TES V190S",
+                "Block teknik TEROBVS",
+                "Projekttid",
+                "Flink, Joakim, Jillram, Andreas, Åkerlund, Daniel",
+                "Klassrummet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62354",
+            "startdate": "2019-11-04",
+            "starttime": "14:35",
+            "enddate": "2019-11-04",
+            "endtime": "16:10",
+            "columns": [
+                "TES V190S",
+                "Block teknik TEROBVS",
+                "Projekttid",
+                "Flink, Joakim, Jillram, Andreas, Åkerlund, Daniel",
+                "Klassrummet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62351",
+            "startdate": "2019-11-05",
+            "starttime": "08:10",
+            "enddate": "2019-11-05",
+            "endtime": "09:30",
+            "columns": [
+                "TES V190S",
+                "Block teknik TEROBVS",
+                "Projekttid",
+                "Flink, Joakim, Jillram, Andreas, Åkerlund, Daniel",
+                "Klassrummet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62352",
+            "startdate": "2019-11-05",
+            "starttime": "09:50",
+            "enddate": "2019-11-05",
+            "endtime": "10:50",
+            "columns": [
+                "TES V190S",
+                "Block teknik TEROBVS",
+                "Projekttid",
+                "Jillram, Andreas, Åkerlund, Daniel",
+                "Klassrummet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62353",
+            "startdate": "2019-11-05",
+            "starttime": "12:05",
+            "enddate": "2019-11-05",
+            "endtime": "14:15",
+            "columns": [
+                "TES V190S",
+                "Block teknik TEROBVS",
+                "Projekttid",
+                "Flink, Joakim, Jillram, Andreas, Åkerlund, Daniel",
+                "Klassrummet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62350",
+            "startdate": "2019-11-05",
+            "starttime": "14:35",
+            "enddate": "2019-11-05",
+            "endtime": "16:10",
+            "columns": [
+                "TES V190S",
+                "Block teknik TEROBVS",
+                "Projekt klart",
+                "Flink, Joakim, Jillram, Andreas, Åkerlund, Daniel",
+                "Klassrummet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "63364",
+            "startdate": "2019-11-06",
+            "starttime": "08:10",
+            "enddate": "2019-11-06",
+            "endtime": "09:10",
+            "columns": [
+                "TES V190S",
+                "Matematik 1c",
+                "4.1 geometri & algebra",
+                "Hallberg, Anna",
+                "Klassrummet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "58425",
+            "startdate": "2019-11-06",
+            "starttime": "09:40",
+            "enddate": "2019-11-06",
+            "endtime": "10:50",
+            "columns": [
+                "TES V190S",
+                "Idrott och hälsa 1",
+                "LÖGARÄNGSBADET",
+                "Ökvist, Jonas",
+                "",
+                "",
+                "SIMNING"
+            ]
+        },
+        {
+            "id": "62355",
+            "startdate": "2019-11-06",
+            "starttime": "12:05",
+            "enddate": "2019-11-06",
+            "endtime": "14:15",
+            "columns": [
+                "TES V190S",
+                "Block teknik TEROBVS",
+                "Examinationsfilm",
+                "Flink, Joakim, Jillram, Andreas, Åkerlund, Daniel",
+                "Klassrummet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "61064",
+            "startdate": "2019-11-06",
+            "starttime": "14:35",
+            "enddate": "2019-11-06",
+            "endtime": "16:10",
+            "columns": [
+                "TE V1801-1803, TE V1901-1902, TES V180S, TES V190S",
+                "Gem aktivitet",
+                "studieverkstad",
+                "Lärare zzz",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62040",
+            "startdate": "2019-11-07",
+            "starttime": "08:10",
+            "enddate": "2019-11-07",
+            "endtime": "09:30",
+            "columns": [
+                "TE V1901, TES V190S",
+                "Moderna språk 3 Spanska",
+                "prov - tala",
+                "Smeds, Mariella",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62042",
+            "startdate": "2019-11-07",
+            "starttime": "08:10",
+            "enddate": "2019-11-07",
+            "endtime": "09:30",
+            "columns": [
+                "TE V1901-1903, TES V190S",
+                "Moderna språk 3 Tyska",
+                "",
+                "Frimmel, Helena",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "64597",
+            "startdate": "2019-11-07",
+            "starttime": "08:10",
+            "enddate": "2019-11-07",
+            "endtime": "09:30",
+            "columns": [
+                "TE V1901-1903, TES V190S",
+                "Moderna språk 3 Franska",
+                "",
+                "Moberg Paganelli, Stella",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62346",
+            "startdate": "2019-11-07",
+            "starttime": "09:50",
+            "enddate": "2019-11-07",
+            "endtime": "10:55",
+            "columns": [
+                "TES V190S",
+                "Svenska 1",
+                "",
+                "Beck Johansson, Judith",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "65310",
+            "startdate": "2019-11-07",
+            "starttime": "09:50",
+            "enddate": "2019-11-07",
+            "endtime": "10:55",
+            "columns": [
+                "TES V190S",
+                "Svenska 1",
+                "",
+                "Beck Johansson, Judith",
+                "Vardagsrummet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62344",
+            "startdate": "2019-11-07",
+            "starttime": "12:05",
+            "enddate": "2019-11-07",
+            "endtime": "14:15",
+            "columns": [
+                "TES V190S",
+                "Samhällskunskap 1b",
+                "",
+                "Westerholm, Jonas",
+                "Vardagsrummet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62436",
+            "startdate": "2019-11-07",
+            "starttime": "14:35",
+            "enddate": "2019-11-07",
+            "endtime": "16:10",
+            "columns": [
+                "TES V190S",
+                "Svenska 1",
+                "",
+                "Beck Johansson, Judith",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "65309",
+            "startdate": "2019-11-07",
+            "starttime": "14:35",
+            "enddate": "2019-11-07",
+            "endtime": "16:10",
+            "columns": [
+                "TES V190S",
+                "Svenska 1",
+                "",
+                "Beck Johansson, Judith",
+                "Klassrummet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62980",
+            "startdate": "2019-11-08",
+            "starttime": "08:10",
+            "enddate": "2019-11-08",
+            "endtime": "09:30",
+            "columns": [
+                "TES V190S",
+                "Engelska 5",
+                "",
+                "Frimmel, Helena, Smeds, Mariella",
+                "Klassrummet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62343",
+            "startdate": "2019-11-08",
+            "starttime": "09:50",
+            "enddate": "2019-11-08",
+            "endtime": "10:55",
+            "columns": [
+                "TES V190S",
+                "Engelska 5",
+                "",
+                "Frimmel, Helena, Smeds, Mariella",
+                "Klassrummet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "59410",
+            "startdate": "2019-11-08",
+            "starttime": "12:05",
+            "enddate": "2019-11-08",
+            "endtime": "12:55",
+            "columns": [
+                "TES V190S",
+                "Utvärderingstid",
+                "",
+                "Hallberg, Anna, Åkerlund, Daniel",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62332",
+            "startdate": "2019-11-08",
+            "starttime": "12:55",
+            "enddate": "2019-11-08",
+            "endtime": "15:00",
+            "columns": [
+                "TES V190S",
+                "Matematik 1c",
+                "4.1 geometri & algebra",
+                "Hallberg, Anna",
+                "Klassrummet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "63761",
+            "startdate": "2019-11-08",
+            "starttime": "15:15",
+            "enddate": "2019-11-08",
+            "endtime": "16:30",
+            "columns": [
+                "TE V1801-1803, TE V1901-1903, TES V180S, TES V190S",
+                "",
+                "fysikstöd",
+                "Fors, Eva",
+                "",
+                "Annan aktivitet",
+                ""
+            ]
+        },
+        {
+            "id": "62050",
+            "startdate": "2019-11-11",
+            "starttime": "08:10",
+            "enddate": "2019-11-11",
+            "endtime": "09:30",
+            "columns": [
+                "TE V1901, TES V190S",
+                "Moderna språk 3 Spanska",
+                "",
+                "Smeds, Mariella",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62053",
+            "startdate": "2019-11-11",
+            "starttime": "08:10",
+            "enddate": "2019-11-11",
+            "endtime": "09:30",
+            "columns": [
+                "TE V1901-1903, TES V190S",
+                "Moderna språk 3 Tyska",
+                "",
+                "Frimmel, Helena",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "64598",
+            "startdate": "2019-11-11",
+            "starttime": "08:10",
+            "enddate": "2019-11-11",
+            "endtime": "09:30",
+            "columns": [
+                "TE V1901-1903, TES V190S",
+                "Moderna språk 3 Franska",
+                "",
+                "Moberg Paganelli, Stella",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62334",
+            "startdate": "2019-11-11",
+            "starttime": "09:50",
+            "enddate": "2019-11-11",
+            "endtime": "10:55",
+            "columns": [
+                "TES V190S",
+                "Matematik 1c",
+                "4.2 Geometri och bevis",
+                "Hallberg, Anna",
+                "Terrariet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62460",
+            "startdate": "2019-11-11",
+            "starttime": "12:05",
+            "enddate": "2019-11-11",
+            "endtime": "14:15",
+            "columns": [
+                "TES V190S",
+                "Matematik 1c",
+                "4.2 Geometri och bevis",
+                "Hallberg, Anna",
+                "Terrariet",
+                "",
+                "Trigonometri!"
+            ]
+        },
+        {
+            "id": "59478",
+            "startdate": "2019-11-11",
+            "starttime": "12:15",
+            "enddate": "2019-11-11",
+            "endtime": "16:10",
+            "columns": [
+                "TE V1901-1903, TES V190S",
+                "Gem aktivitet",
+                "utvecklingssamtal åk 1",
+                "Beck Johansson, Judith, Erling Framdahl, Isabel, Frimmel, Helena, Fällman, Tove, Hallberg, Anna, Henriksson, Pär, Jansson, Ida, Karlsson, Lena, Åkerlund, Daniel",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62461",
+            "startdate": "2019-11-11",
+            "starttime": "14:35",
+            "enddate": "2019-11-11",
+            "endtime": "16:10",
+            "columns": [
+                "TES V190S",
+                "Samhällskunskap 1b",
+                "",
+                "Westerholm, Jonas",
+                "Terrariet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62455",
+            "startdate": "2019-11-12",
+            "starttime": "08:10",
+            "enddate": "2019-11-12",
+            "endtime": "09:30",
+            "columns": [
+                "TES V190S",
+                "Svenska 1",
+                "",
+                "Beck Johansson, Judith",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "65311",
+            "startdate": "2019-11-12",
+            "starttime": "08:10",
+            "enddate": "2019-11-12",
+            "endtime": "09:30",
+            "columns": [
+                "TES V190S",
+                "Svenska 1",
+                "",
+                "Beck Johansson, Judith",
+                "Terrariet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "61404",
+            "startdate": "2019-11-12",
+            "starttime": "09:50",
+            "enddate": "2019-11-12",
+            "endtime": "10:55",
+            "columns": [
+                "TES V190S",
+                "Matematik 1c",
+                "4.2 Geometri och bevis",
+                "Hallberg, Anna",
+                "Terrariet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62453",
+            "startdate": "2019-11-12",
+            "starttime": "12:05",
+            "enddate": "2019-11-12",
+            "endtime": "14:15",
+            "columns": [
+                "TES V190S",
+                "Samhällskunskap 1b",
+                "",
+                "Westerholm, Jonas",
+                "Terrariet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "59544",
+            "startdate": "2019-11-12",
+            "starttime": "12:15",
+            "enddate": "2019-11-12",
+            "endtime": "16:10",
+            "columns": [
+                "TE V1901-1903, TES V190S",
+                "Gem aktivitet",
+                "",
+                "Beck Johansson, Judith, Erling Framdahl, Isabel, Frimmel, Helena, Fällman, Tove, Hallberg, Anna, Henriksson, Pär, Jansson, Ida, Karlsson, Lena, Åkerlund, Daniel",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62465",
+            "startdate": "2019-11-12",
+            "starttime": "14:35",
+            "enddate": "2019-11-12",
+            "endtime": "16:10",
+            "columns": [
+                "TES V190S",
+                "Kemi 1",
+                "Vardagsrum",
+                "Fällman, Tove",
+                "Kemi lab",
+                "",
+                ""
+            ]
+        }
+    ]
+}

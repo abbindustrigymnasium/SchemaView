@@ -1,0 +1,657 @@
+{
+    "columnheaders": [
+        "Klass",
+        "Kurs",
+        "Info",
+        "Lärare",
+        "Sal",
+        "Aktivitet",
+        ""
+    ],
+    "info": {
+        "reservationlimit": 200,
+        "reservationcount": 40
+    },
+    "reservations": [
+        {
+            "id": "62561",
+            "startdate": "2019-11-04",
+            "starttime": "08:10",
+            "enddate": "2019-11-04",
+            "endtime": "09:30",
+            "columns": [
+                "TES V180S",
+                "Block teknik TEROBVS",
+                "Teknikgrottan",
+                "Flink, Joakim, Jillram, Andreas",
+                "Terrariet",
+                "",
+                "Labb Hallgivare"
+            ]
+        },
+        {
+            "id": "62560",
+            "startdate": "2019-11-04",
+            "starttime": "09:50",
+            "enddate": "2019-11-04",
+            "endtime": "11:05",
+            "columns": [
+                "TES V180S",
+                "Block teknik TEROBVS",
+                "Teknikgrottan",
+                "Flink, Joakim, Jillram, Andreas",
+                "Terrariet",
+                "",
+                "Labb Hallgivare"
+            ]
+        },
+        {
+            "id": "62486",
+            "startdate": "2019-11-04",
+            "starttime": "12:05",
+            "enddate": "2019-11-04",
+            "endtime": "16:00",
+            "columns": [
+                "TES V180S",
+                "MDH spetsutbildning",
+                "tentamen information",
+                "Lärare xxx",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "60825",
+            "startdate": "2019-11-05",
+            "starttime": "08:10",
+            "enddate": "2019-11-05",
+            "endtime": "09:30",
+            "columns": [
+                "TE V1801-1803, TES V180S",
+                "Moderna språk 4 Franska",
+                "",
+                "Moberg Paganelli, Stella",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "60854",
+            "startdate": "2019-11-05",
+            "starttime": "08:10",
+            "enddate": "2019-11-05",
+            "endtime": "09:30",
+            "columns": [
+                "TE V1801-1803, TES V180S",
+                "Moderna språk 4 Tyska",
+                "",
+                "Frimmel, Helena",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "60884",
+            "startdate": "2019-11-05",
+            "starttime": "08:10",
+            "enddate": "2019-11-05",
+            "endtime": "09:30",
+            "columns": [
+                "TE V1801-1803, TES V180S",
+                "Moderna språk 4 Spanska",
+                "",
+                "Smeds, Mariella",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62424",
+            "startdate": "2019-11-05",
+            "starttime": "09:50",
+            "enddate": "2019-11-05",
+            "endtime": "11:05",
+            "columns": [
+                "TES V180S",
+                "Block teknik TEROBVS",
+                "Schema multisim",
+                "Jillram, Andreas, Åkerlund, Daniel",
+                "Terrariet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62420",
+            "startdate": "2019-11-05",
+            "starttime": "12:05",
+            "enddate": "2019-11-05",
+            "endtime": "14:15",
+            "columns": [
+                "TES V180S",
+                "Block teknik TEROBVS",
+                "Cadda givarkort",
+                "Flink, Joakim, Jillram, Andreas, Åkerlund, Daniel",
+                "Terrariet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62422",
+            "startdate": "2019-11-05",
+            "starttime": "14:35",
+            "enddate": "2019-11-05",
+            "endtime": "16:10",
+            "columns": [
+                "TES V180S",
+                "Block teknik TEROBVS",
+                "Cadda givarkort",
+                "Flink, Joakim, Jillram, Andreas, Åkerlund, Daniel",
+                "Terrariet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62559",
+            "startdate": "2019-11-06",
+            "starttime": "08:10",
+            "enddate": "2019-11-06",
+            "endtime": "09:30",
+            "columns": [
+                "TES V180S",
+                "Block teknik TEROBVS",
+                "Cadda givarkort",
+                "Flink, Joakim, Jillram, Andreas, Åkerlund, Daniel",
+                "Terrariet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62501",
+            "startdate": "2019-11-06",
+            "starttime": "09:50",
+            "enddate": "2019-11-06",
+            "endtime": "11:05",
+            "columns": [
+                "TES V180S",
+                "Block teknik TEROBVS",
+                "MDH-Micke",
+                "Flink, Joakim, Jillram, Andreas, Åkerlund, Daniel",
+                "Terrariet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62421",
+            "startdate": "2019-11-06",
+            "starttime": "12:05",
+            "enddate": "2019-11-06",
+            "endtime": "14:15",
+            "columns": [
+                "TES V180S",
+                "Block teknik TEROBVS",
+                "Fräsa/Cad/löda/bil",
+                "Flink, Joakim, Jillram, Andreas, Åkerlund, Daniel",
+                "Terrariet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "61064",
+            "startdate": "2019-11-06",
+            "starttime": "14:35",
+            "enddate": "2019-11-06",
+            "endtime": "16:10",
+            "columns": [
+                "TE V1801-1803, TE V1901-1902, TES V180S, TES V190S",
+                "Gem aktivitet",
+                "studieverkstad",
+                "Lärare zzz",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "65346",
+            "startdate": "2019-11-07",
+            "starttime": "08:10",
+            "enddate": "2019-11-07",
+            "endtime": "09:20",
+            "columns": [
+                "TES V180S",
+                "Idrott och hälsa 1",
+                "LÖGARÄNGSBADET",
+                "Ökvist, Jonas",
+                "",
+                "",
+                "SIMNING"
+            ]
+        },
+        {
+            "id": "62437",
+            "startdate": "2019-11-07",
+            "starttime": "10:05",
+            "enddate": "2019-11-07",
+            "endtime": "11:05",
+            "columns": [
+                "TES V180S",
+                "Matematik 3c",
+                "",
+                "Hallberg, Anna",
+                "Terrariet",
+                "",
+                "3.2 derivator och tillämpningar"
+            ]
+        },
+        {
+            "id": "62429",
+            "startdate": "2019-11-07",
+            "starttime": "12:05",
+            "enddate": "2019-11-07",
+            "endtime": "14:15",
+            "columns": [
+                "TES V180S",
+                "Matematik 3c",
+                "",
+                "Hallberg, Anna",
+                "Terrariet",
+                "",
+                "3.2 derivator och tillämpningar polynomfunktioner"
+            ]
+        },
+        {
+            "id": "60911",
+            "startdate": "2019-11-07",
+            "starttime": "14:35",
+            "enddate": "2019-11-07",
+            "endtime": "16:10",
+            "columns": [
+                "TE V1801-1803, TES V180S",
+                "Moderna språk 4 Spanska",
+                "",
+                "Smeds, Mariella",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "60917",
+            "startdate": "2019-11-07",
+            "starttime": "14:35",
+            "enddate": "2019-11-07",
+            "endtime": "16:10",
+            "columns": [
+                "TE V1801-1803, TES V180S",
+                "Moderna språk 4 Tyska",
+                "",
+                "Frimmel, Helena",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "60923",
+            "startdate": "2019-11-07",
+            "starttime": "14:35",
+            "enddate": "2019-11-07",
+            "endtime": "16:10",
+            "columns": [
+                "TE V1801-1803, TES V180S",
+                "Moderna språk 4 Franska",
+                "",
+                "Moberg Paganelli, Stella",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62428",
+            "startdate": "2019-11-08",
+            "starttime": "08:10",
+            "enddate": "2019-11-08",
+            "endtime": "09:30",
+            "columns": [
+                "TES V180S",
+                "Matematik 3c",
+                "",
+                "Hallberg, Anna",
+                "Terrariet",
+                "",
+                "3.2 Derivata och tillämpningar potensfunktioner"
+            ]
+        },
+        {
+            "id": "62425",
+            "startdate": "2019-11-08",
+            "starttime": "09:50",
+            "enddate": "2019-11-08",
+            "endtime": "11:05",
+            "columns": [
+                "TES V180S",
+                "Fysik 1a",
+                "",
+                "Fors, Eva",
+                "Terrariet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "59158",
+            "startdate": "2019-11-08",
+            "starttime": "12:05",
+            "enddate": "2019-11-08",
+            "endtime": "12:55",
+            "columns": [
+                "TES V180S",
+                "Utvärderingstid",
+                "",
+                "Flink, Joakim, Landin, Janice",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62431",
+            "startdate": "2019-11-08",
+            "starttime": "12:55",
+            "enddate": "2019-11-08",
+            "endtime": "15:00",
+            "columns": [
+                "TES V180S",
+                "Fysik 1a",
+                "",
+                "Fors, Eva",
+                "Terrariet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "63761",
+            "startdate": "2019-11-08",
+            "starttime": "15:15",
+            "enddate": "2019-11-08",
+            "endtime": "16:30",
+            "columns": [
+                "TE V1801-1803, TE V1901-1903, TES V180S, TES V190S",
+                "",
+                "fysikstöd",
+                "Fors, Eva",
+                "",
+                "Annan aktivitet",
+                ""
+            ]
+        },
+        {
+            "id": "62448",
+            "startdate": "2019-11-11",
+            "starttime": "08:10",
+            "enddate": "2019-11-11",
+            "endtime": "09:30",
+            "columns": [
+                "TES V180S",
+                "Matematik 3c",
+                "Andraderivatan och grafen",
+                "Hallberg, Anna",
+                "Klassrummet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62562",
+            "startdate": "2019-11-11",
+            "starttime": "09:50",
+            "enddate": "2019-11-11",
+            "endtime": "11:05",
+            "columns": [
+                "TES V180S",
+                "Block teknik TEROBVS",
+                "Fräsa/Cad/löda/bil",
+                "Flink, Joakim, Jillram, Andreas",
+                "Klassrummet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62443",
+            "startdate": "2019-11-11",
+            "starttime": "12:05",
+            "enddate": "2019-11-11",
+            "endtime": "14:15",
+            "columns": [
+                "TES V180S",
+                "Block teknik TEROBVS",
+                "Fräsa/Cad/löda/bil",
+                "Flink, Joakim, Jillram, Andreas",
+                "Klassrummet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62444",
+            "startdate": "2019-11-11",
+            "starttime": "14:35",
+            "enddate": "2019-11-11",
+            "endtime": "16:10",
+            "columns": [
+                "TES V180S",
+                "Block teknik TEROBVS",
+                "",
+                "Flink, Joakim",
+                "Klassrummet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "60826",
+            "startdate": "2019-11-12",
+            "starttime": "08:10",
+            "enddate": "2019-11-12",
+            "endtime": "09:30",
+            "columns": [
+                "TE V1801-1803, TES V180S",
+                "Moderna språk 4 Franska",
+                "",
+                "Moberg Paganelli, Stella",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "60855",
+            "startdate": "2019-11-12",
+            "starttime": "08:10",
+            "enddate": "2019-11-12",
+            "endtime": "09:30",
+            "columns": [
+                "TE V1801-1803, TES V180S",
+                "Moderna språk 4 Tyska",
+                "PROV SKRIVA",
+                "Frimmel, Helena",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "60885",
+            "startdate": "2019-11-12",
+            "starttime": "08:10",
+            "enddate": "2019-11-12",
+            "endtime": "09:30",
+            "columns": [
+                "TE V1801-1803, TES V180S",
+                "Moderna språk 4 Spanska",
+                "PROV SKRIVA",
+                "Smeds, Mariella",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62440",
+            "startdate": "2019-11-12",
+            "starttime": "09:50",
+            "enddate": "2019-11-12",
+            "endtime": "11:05",
+            "columns": [
+                "TES V180S",
+                "Block teknik TEROBVS",
+                "Montera löda",
+                "Flink, Joakim, Jillram, Andreas, Åkerlund, Daniel",
+                "Klassrummet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62441",
+            "startdate": "2019-11-12",
+            "starttime": "12:05",
+            "enddate": "2019-11-12",
+            "endtime": "14:15",
+            "columns": [
+                "TES V180S",
+                "Block teknik TEROBVS",
+                "Testa/omarbeta",
+                "Flink, Joakim, Jillram, Andreas, Åkerlund, Daniel",
+                "Klassrummet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "62442",
+            "startdate": "2019-11-12",
+            "starttime": "14:35",
+            "enddate": "2019-11-12",
+            "endtime": "16:10",
+            "columns": [
+                "TES V180S",
+                "Block teknik TEROBVS",
+                "Programmera, testa",
+                "Flink, Joakim, Jillram, Andreas, Åkerlund, Daniel",
+                "Klassrummet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "59486",
+            "startdate": "2019-11-13",
+            "starttime": "08:05",
+            "enddate": "2019-11-13",
+            "endtime": "17:40",
+            "columns": [
+                "TE V1801-1803, TE V1901-1903, TES V180S, TES V190S",
+                "",
+                "studiedag",
+                "Lärare xxx",
+                "",
+                "Annan aktivitet",
+                ""
+            ]
+        },
+        {
+            "id": "65347",
+            "startdate": "2019-11-14",
+            "starttime": "08:10",
+            "enddate": "2019-11-14",
+            "endtime": "09:20",
+            "columns": [
+                "TES V180S",
+                "Idrott och hälsa 1",
+                "LÖGARÄNGSBADET",
+                "Ökvist, Jonas",
+                "",
+                "",
+                "SIMNING"
+            ]
+        },
+        {
+            "id": "62545",
+            "startdate": "2019-11-14",
+            "starttime": "10:05",
+            "enddate": "2019-11-14",
+            "endtime": "11:05",
+            "columns": [
+                "TES V180S",
+                "Historia 1a1",
+                "Vad är historia?",
+                "Engelmark, Anna",
+                "Klassrummet",
+                "",
+                "Kursintroduktion Kort om källor, källkritik och historiebruk."
+            ]
+        },
+        {
+            "id": "62447",
+            "startdate": "2019-11-14",
+            "starttime": "12:05",
+            "enddate": "2019-11-14",
+            "endtime": "14:15",
+            "columns": [
+                "TES V180S",
+                "Samhällskunskap 1b",
+                "",
+                "Westerholm, Jonas",
+                "Klassrummet",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "60926",
+            "startdate": "2019-11-14",
+            "starttime": "14:35",
+            "enddate": "2019-11-14",
+            "endtime": "16:10",
+            "columns": [
+                "TE V1801-1803, TES V180S",
+                "Moderna språk 4 Tyska",
+                "PROV TALA",
+                "Frimmel, Helena",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": "60927",
+            "startdate": "2019-11-14",
+            "starttime": "14:35",
+            "enddate": "2019-11-14",
+            "endtime": "16:10",
+            "columns": [
+                "TE V1801-1803, TES V180S",
+                "Moderna språk 4 Franska",
+                "PROV SKRIVA",
+                "Moberg Paganelli, Stella",
+                "",
+                "",
+                ""
+            ]
+        }
+    ]
+}
