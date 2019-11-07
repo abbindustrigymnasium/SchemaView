@@ -1,7 +1,8 @@
 
 function today(){
-    
-    return new Date()
+    var wintertime = new Date().toLocaleString("se-SWE",{timeZone:'Europe/Stockholm'})
+    //console.log(new Date(wintertime).toLocaleDateString())
+    return new Date(wintertime)
 }
 
 function calcDiff(date1,date2){
@@ -13,7 +14,7 @@ function calcDiff(date1,date2){
     //console.log(parseFloat("0."+h_m_array[1])*60)
     if (parseInt(h_m_array[0]) > 0  || h_m_array[0].slice(0,1) != '-'){
         console.log('Diff',parseInt(h_m_array[0]) + "h",Math.ceil(((parseFloat("0."+h_m_array[1])*60))) + "m")
-        return parseInt(h_m_array[0]+1) + "h" + " " + Math.ceil((parseFloat("0."+h_m_array[1])*60)) + "m"
+        return parseInt(h_m_array[0]) + "h" + " " + Math.ceil((parseFloat("0."+h_m_array[1])*60)) + "m"
     } else {
         return false
     }
@@ -49,16 +50,16 @@ function currentLesson(lesson, startTime, currentDate, endTime, div){
                 if ((lesson.columns[1].includes("Moderna")) === true){
                     div.getElementsByClassName('currentLesson')[0].innerText = "Lektion just nu: " + "Moderna Språk" + " i " + lesson.columns[4]
                 } else{
-                    div.getElementsByClassName('currentLesson')[0].innerText = "Lektion just nu: " + lesson.columns[4]
+                    div.getElementsByClassName('currentLesson')[0].innerText = "Lektion just nu: " + lesson.columns[2]
                 }
 
             } else {
                 if ((lesson.columns[1].includes("Moderna")) === true){
                     div.getElementsByClassName('currentLesson')[0].innerText = "Lektion just nu: " + "Moderna Språk"
                 } else{
-                    div.getElementsByClassName('currentLesson')[0].innerText = "Lektion just nu: " + lesson.columns[4]
+                    div.getElementsByClassName('currentLesson')[0].innerText = "Lektion just nu: " + lesson.columns[2]
                 }
-                }
+            }
         div.getElementsByClassName('break')[0].innerText = "Lektionen slutar om: " + calcDiff(endTime, currentDate)
     }
 
@@ -149,8 +150,8 @@ let latestMin = 1299
 let switchTimeEdit = false
 function startTime() {
 
-    var today = new Date();
-    var h = today.getHours()+1;
+    var today = new Date(new Date().toLocaleString("se-SWE",{timeZone:'Europe/Stockholm'}))
+    var h = today.getHours();
     var m = today.getMinutes();
     //console.log(m)
     m = checkTime(m);
