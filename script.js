@@ -141,6 +141,9 @@ function doEverything(klass, url){
 }
 
 window.onload = function(){
+    document.getElementById('180sFrame').style.display ="block"
+    document.getElementById('190sFrame').style.display ="none"
+    document.getElementById('timeEditInfo').innerText = '180s' 
     startTime()
     // doEverything("180s", "https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri1Y7X3QQQfZY6QfZ5064405y7Y7.json")
     // doEverything("190s", "https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri627Q5Q750ZQ4Q5Y36Q7Zn6y4Z0.json")
