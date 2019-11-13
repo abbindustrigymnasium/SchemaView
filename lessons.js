@@ -15,7 +15,12 @@ function calcDiff(date1,date2){
     //console.log(parseFloat("0."+h_m_array[1])*60)
     if (parseInt(h_m_array[0]) > 0  || h_m_array[0].slice(0,1) != '-'){
         console.log('Diff',parseInt(h_m_array[0]) + "h",Math.ceil(((parseFloat("0."+h_m_array[1])*60))) + "m")
-        return parseInt(h_m_array[0]) + "h" + " " + Math.ceil((parseFloat("0."+h_m_array[1])*60)) + "m"
+        if (parseInt(h_m_array[0]) === 0){
+            return Math.ceil((parseFloat("0."+h_m_array[1])*60)) + "m"
+        } else {
+            return parseInt(h_m_array[0]) + "h" + " " + Math.ceil((parseFloat("0."+h_m_array[1])*60)) + "m"
+        }
+        
     } else {
         return false
     }
@@ -23,7 +28,8 @@ function calcDiff(date1,date2){
      
 }
 function renderNextLessons(lesson, time, div){
-    if (lesson.columns[1] === 'Gem aktivitet'){
+    //console.log(lesson.columns)
+    if (lesson.columns[1] === 'Gem aktivitet' || lesson.columns[5] === "Annan aktivitet"){
         if (lesson.columns[4] != ""){
             div.getElementsByClassName('lessons')[0].innerText += lesson.columns[2] + " börjar om " + time + " i " + lesson.columns[4]+ '\n'
         } else {
@@ -46,20 +52,32 @@ function currentLesson(lesson, startTime, currentDate, endTime, div){
         console.log("current är", lesson.columns[1])
         console.log(div)
         console.log(div.getElementsByClassName('currentLesson').innerText)
-        
-            if (lesson.columns[4] != ""){
-                if ((lesson.columns[1].includes("Moderna")) === true){
-                    div.getElementsByClassName('currentLesson')[0].innerText = "Lektion just nu: " + "Moderna Språk" + " i " + lesson.columns[4]
-                } else{
-                    div.getElementsByClassName('currentLesson')[0].innerText = "Lektion just nu: " + lesson.columns[1]
+            if(lesson.columns[1] === 'Gem aktivitet' || lesson.columns[5] === "Annan aktivitet"){
+                if (lesson.columns[4] != ""){
+                    
+                    div.getElementsByClassName('currentLesson')[0].innerText = "Lektion just nu: " + lesson.columns[2] + " i " + lesson.columns[4]
+
+                } else {    
+                    div.getElementsByClassName('currentLesson')[0].innerText = "Lektion just nu: " + lesson.columns[2]
+                    
+                }
+            } else {
+
+                if (lesson.columns[4] != ""){
+                    if ((lesson.columns[1].includes("Moderna")) === true){
+                        div.getElementsByClassName('currentLesson')[0].innerText = "Lektion just nu: " + "Moderna Språk" + " i " + lesson.columns[4]
+                    } else{
+                        div.getElementsByClassName('currentLesson')[0].innerText = "Lektion just nu: " + lesson.columns[1]
+                    }
+
+                } else {
+                    if ((lesson.columns[1].includes("Moderna")) === true){
+                        div.getElementsByClassName('currentLesson')[0].innerText = "Lektion just nu: " + "Moderna Språk"
+                    } else{
+                        div.getElementsByClassName('currentLesson')[0].innerText = "Lektion just nu: " + lesson.columns[1]
+                    }
                 }
 
-            } else {
-                if ((lesson.columns[1].includes("Moderna")) === true){
-                    div.getElementsByClassName('currentLesson')[0].innerText = "Lektion just nu: " + "Moderna Språk"
-                } else{
-                    div.getElementsByClassName('currentLesson')[0].innerText = "Lektion just nu: " + lesson.columns[1]
-                }
             }
         div.getElementsByClassName('break')[0].innerText = "Lektionen slutar om: " + calcDiff(endTime, currentDate)
     }
@@ -150,6 +168,7 @@ window.onload = function(){
 
 let latestMin = 1299
 let switchTimeEdit = false
+let displayCleaning = false
 function startTime() {
 
     
@@ -162,21 +181,31 @@ function startTime() {
     
     if (latestMin != m){
         clear()
-        doEverything("180s", "180s.json")
-        doEverything("190s", "190s.json")
-        
-        if (switchTimeEdit == false){
-            document.getElementById('180sFrame').style.display ="block"
-            document.getElementById('190sFrame').style.display ="none"
-            document.getElementById('timeEditInfo').innerText = '180s' 
-            switchTimeEdit = true
-        } 
-        else {
-            document.getElementById('180sFrame').style.display ="none"
-            document.getElementById('190sFrame').style.display ="block"
-            document.getElementById('timeEditInfo').innerText = '190s' 
-            switchTimeEdit = false
+        doEverything("180s", "https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri1Y7X3QQQfZY6QfZ5064405y7Y7.json")
+        doEverything("190s", "https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri1Y7X3QQQfZY6QfZ5064205y7Y7.json")
+    
+        if (!cleaning()){
+            if (switchTimeEdit == false){
+                document.getElementById('180sFrame').style.display ="block"
+                document.getElementById('190sFrame').style.display ="none"
+                document.getElementById('timeEditInfo').innerText = '180s' 
+                switchTimeEdit = true
+            } 
+            else {
+                document.getElementById('180sFrame').style.display ="none"
+                document.getElementById('190sFrame').style.display ="block"
+                document.getElementById('timeEditInfo').innerText = '190s' 
+                switchTimeEdit = false
+            }
+            displayCleaning = false
         }
+        else if (cleaning() === true && displayCleaning === false){
+            calculateCleaning()
+            console.log("städa")
+            
+        }
+
+        
         
     }
     

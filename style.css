@@ -2,8 +2,26 @@
 main {
     display: grid;
     grid-template-columns: repeat(3,calc(100vw/3));
-    grid-template-rows: repeat(1,100vh);
-   
+    grid-template-rows: 50vh 22vh 28vh;
+    grid-template-areas: 
+    "arton iframe nitton"
+    "arton iframe nitton"
+    "arton food nitton"
+    ;
+}
+
+#180s {
+    grid-area: arton;
+    
+}
+#190s {
+    grid-area: nitton;
+}
+#food {
+    grid-area: food;
+}
+#cleaning {
+    grid-area: clean;
 }
 
 .box {
@@ -21,7 +39,7 @@ main {
 
 .timeEditIFrame {
     z-index: 0;
-    height: 72%;
+    height: 72vh;
     width:100%;
 }
 
@@ -59,4 +77,8 @@ h1 {
 
 h3 {
     font-size: 32px;
+}
+
+#iframe{
+    text-align: center;
 }
