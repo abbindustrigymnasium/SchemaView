@@ -181,8 +181,8 @@ function startTime() {
     
     if (latestMin != m){
         clear()
-        doEverything("180s", "https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri1Y7X3QQQfZY6QfZ5064405y7Y7.json")
-        doEverything("190s", "https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri1Y7X3QQQfZY6QfZ5064205y7Y7.json")
+        doEverything("180s", "https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri167XQQ040Z50QfY1007gZ6y6Y41037QY.json")
+        doEverything("190s", "https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri167XQQ040Z50QfY1007gZ6y6Y21037QY.json")
     
         if (!cleaning()){
             if (switchTimeEdit == false){
