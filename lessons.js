@@ -28,7 +28,7 @@ function calcDiff(date1,date2){
      
 }
 function renderNextLessons(lesson, time, div){
-    console.log(lesson.columns)
+    //console.log(lesson.columns)
     if (lesson.columns[1] === 'Gem aktivitet' || lesson.columns[5] === "Annan aktivitet"){
         if (lesson.columns[4] != ""){
             div.getElementsByClassName('lessons')[0].innerText += lesson.columns[2] + " börjar om " + time + " i " + lesson.columns[4]+ '\n'
@@ -87,7 +87,7 @@ function currentLesson(lesson, startTime, currentDate, endTime, div){
 function nextLesson(lessons, div){
     var moderna = false
     lessons.forEach(element => {
-        // console.log(element)
+        
         var currentDate = today()
         var currentDay = currentDate.getDate()
         var currentMonth = currentDate.getMonth()+1
@@ -95,14 +95,13 @@ function nextLesson(lessons, div){
             currentDay = "0" + currentDay
         }
         if (currentMonth < 10){
-            currentMonth = "0"+currentMonth
+            currentMonth = "0" + currentMonth
         }
 
     
-        console.log(currentDate.getFullYear()+'-'+currentMonth+'-'+ currentDay)
-        // console.log(element.startdate)
+        console.log(currentDate.getFullYear()+'-'+currentDate.getMonth()+'-'+ currentDay)
         if (element.startdate === currentDate.getFullYear()+'-'+currentMonth+'-'+ currentDay){
-            console.log(element.columns[1])
+            // console.log(element.columns[1])
             // console.log(element.starttime)
             const dateStringStart = element.startdate +" "+ element.starttime
             const dateStringEnd = element.enddate +" "+ element.endtime
@@ -173,7 +172,6 @@ window.onload = function(){
 
 let latestMin = 1299
 let switchTimeEdit = false
-let displayCleaning = false
 function startTime() {
 
     
@@ -188,6 +186,24 @@ function startTime() {
         clear()
         doEverything("180s", "https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri1Y7X3QQQfZY6QfZ5064405y7Y7.json")
         doEverything("190s", "https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri1Y7X3QQQfZY6QfZ5064205y7Y7.json")
+    
+        
+        if (switchTimeEdit == false){
+            document.getElementById('180sFrame').style.display ="block"
+            document.getElementById('190sFrame').style.display ="none"
+            document.getElementById('timeEditInfo').innerText = '180s' 
+            switchTimeEdit = true
+        } 
+        else {
+            document.getElementById('180sFrame').style.display ="none"
+            document.getElementById('190sFrame').style.display ="block"
+            document.getElementById('timeEditInfo').innerText = '190s' 
+            switchTimeEdit = false
+        }
+    
+        
+    
+
         
         
     }
