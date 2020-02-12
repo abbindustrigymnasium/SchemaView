@@ -18,7 +18,7 @@
                 document.getElementById("messages").innerHTML += '<span>Connecting to: ' + host + ' on port: ' + port + '</span><br/>';
                 document.getElementById("messages").innerHTML += '<span>Using the following client value: ' + clientID + '</span><br/>';
               // Initialize new Paho client connection
-                client = new Paho.MQTT.Client(host, Number(port), clientID, protocol=mqtt.MQTTv31);
+                client = new Paho.MQTT.Client(host, Number(port), clientID);
                 // Set callback handlers
                 client.onConnectionLost = onConnectionLost;
                 client.onMessageArrived = onMessageArrived;
