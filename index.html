@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+  <!--
+    WARNING! Make sure that you match all Quasar related
+    tags to the same version! (Below it's "@1.13.1")
+  -->
+
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/quasar@1.13.1/dist/quasar.min.css" rel="stylesheet" type="text/css">
+    <!-- AFTER the Quasar stylesheet tags: -->
+    <link href="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qcalendar/dist/index.min.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <div id="q-app">
+      <q-carousel
+      style="height: 100%;"
+      animated
+      v-model="slide"
+      navigation
+      keep-alive
+      infinite
+      :autoplay="autoplay"      
+      transition-prev="slide-right"
+      transition-next="slide-left">
+      <q-carousel-slide :name="1">
+        <div class="text-center text-h6">180S</div>
+        <q-calendar
+        v-model="selectedDate"
+        view="week-agenda"
+        :weekdays="[1,2,3,4,5]"
+        locale="sv-SE">
+          <template #day-body="{ timestamp }">
+            <template v-for="(agendas, property) in getAgenda180S(timestamp)">
+              <div class="row q-ma-sm">
+                <div
+                  v-for="agenda in agendas"
+                  :key="timestamp.date + agenda.time"
+                  :label="agenda.time"
+                  v-if="agenda.columns"
+                  class="justify-start shadow-5"
+                  :class="getClass(agenda.columns[1], agendas.length)">
+                  <div class="q-px-xs">
+                    <strong>{{ agenda.starttime }}</strong>
+                  </div>
+                  <div v-if="agenda.columns" class="q-px-xs">
+                    <span v-for="(item, index) in agenda.columns" class="block" :key="index">
+                      {{ item }}
+                    </span>
+                  </div>
+                  <div class="q-px-xs">
+                    <strong>{{ agenda.endtime }}</strong>
+                  </div>
+                </div>
+              </div>
+            </template>            
+          </template>
+        </q-calendar>
+      </q-carousel-slide>
+
+      <q-carousel-slide :name="2">
+        <div class="text-center text-h6">190S</div>
+        <q-calendar
+        v-model="selectedDate"
+        view="week-agenda"
+        :weekdays="[1,2,3,4,5]"
+        locale="sv-SE">
+          <template #day-body="{ timestamp }">
+            <template v-for="(agendas, property) in getAgenda190S(timestamp)">
+              <div class="row q-ma-sm">
+                <div
+                  v-for="agenda in agendas"
+                  :key="timestamp.date + agenda.time"
+                  :label="agenda.time"
+                  v-if="agenda.columns"
+                  class="justify-start shadow-5"
+                  :class="getClass(agenda.columns[1], agendas.length)">
+                  <div class="q-px-xs">
+                    <strong>{{ agenda.starttime }}</strong>
+                  </div>
+                  <div v-if="agenda.columns" class="q-px-xs">
+                    <span v-for="(item, index) in agenda.columns" class="block" :key="index">{{ item }}</span>
+                  </div>
+                  <div class="q-px-xs">
+                    <strong>{{ agenda.endtime }}</strong>
+                  </div>
+                </div>
+              </div>  
+            </template>
+          </template>
+        </q-calendar>
+      </q-carousel-slide>
+
+      <q-carousel-slide :name="3">
+        <div class="text-center text-h6">200S</div>
+        <q-calendar
+        v-model="selectedDate"
+        view="week-agenda"
+        :weekdays="[1,2,3,4,5]"
+        locale="sv-SE">
+          <template #day-body="{ timestamp }">
+            <template v-for="(agendas, property) in getAgenda200S(timestamp)">
+              <div class="row q-ma-sm">
+                <div
+                  v-for="agenda in agendas"
+                  v-if="agenda.columns"
+                  :key="timestamp.date + agenda.time"
+                  :label="agenda.time"
+                  class="justify-start shadow-5"
+                  :class="getClass(agenda.columns[1], agendas.length)">
+                  <div class="q-px-xs">
+                    <strong>{{ agenda.starttime }}</strong>
+                  </div>
+                  <div v-if="agenda.columns" class="q-px-xs">
+                    <span v-for="(item, index) in agenda.columns" class="block" :key="index">{{ item }}</span>
+                  </div>
+                  <div class="q-px-xs">
+                    <strong>{{ agenda.endtime }}</strong>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </template>
+        </q-calendar>
+      </q-carousel-slide> 
+    </q-carousel>
+    </div>
+    <!-- Add the following at the end of your body tag -->    
+    <script src="https://cdn.jsdelivr.net/npm/vue@^2.0.0/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quasar@1.13.1/dist/quasar.umd.modern.min.js"></script>
+    <!-- at end of body, AFTER Quasar script(s): -->
+    <script src="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qcalendar/dist/index.umd.min.js"></script>
+    <script>
+      /*
+        Example kicking off the UI. Obviously, adapt this to your specific needs.
+        Assumes you have a <div id="q-app"></div> in your <body> above
+       */
+      new Vue({
+        el: '#q-app',
+        created() {
+          fetch('https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri1Y7X3QQQfZY6QfZ5079605y7Y7.json')
+            .then(response => response.json())
+            .then(data => (this.class180S = data))
+
+          fetch('https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri1Y7X3QQQfZY6QfZ5079535y7Y7.json')
+            .then(response => response.json())
+            .then(data => (this.class190S = data))
+
+          fetch('https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri1Y7X3QQQfZY6QfZ5076385y7Y7.json')
+            .then(response => response.json())
+            .then(data => (this.class200S = data))
+
+          setInterval(() => { 
+            fetch('https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri1Y7X3QQQfZY6QfZ5079605y7Y7.json')
+            .then(response => response.json())
+            .then(data => (this.class180S = data))
+
+            fetch('https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri1Y7X3QQQfZY6QfZ5079535y7Y7.json')
+            .then(response => response.json())
+            .then(data => (this.class190S = data))
+
+            fetch('https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri1Y7X3QQQfZY6QfZ5076385y7Y7.json')
+            .then(response => response.json())
+            .then(data => (this.class200S = data))
+          }, 24*60*60)          
+        },
+        data: function () {
+          return {
+            autoplay: 10000,
+            slide: 1,
+            selectedDate: '',
+            class180S: {},
+            class190S: {},
+            class200S: {},
+            classColors: [
+              {id: 1, name: 'kemi', color: 'bg-red-5'},                            
+              {id: 2, name: 'matematik', color: 'bg-pink-5'},
+              {id: 3, name: 'idrott', color: 'bg-purple-5'},              
+              {id: 4, name: 'matematik', color: 'bg-indigo-5'},
+              {id: 5, name: 'engelska', color: 'bg-blue-5'},
+              {id: 6, name: 'teknik', color: 'bg-cyan-5'},
+              {id: 7, name: 'utvärderingstid', color: 'bg-green-5'},
+              {id: 8, name: 'moderna språk', color: 'bg-yellow-5'},
+              {id: 9, name: 'fysik', color: 'bg-teal-5'},
+              {id: 10, name: 'mdh', color: 'bg-orange-5'},
+              {id: 11, name: 'svenska', color: 'bg-brown-5'},
+              {id: 12, name: 'gem', color: 'bg-grey-5'}
+            ]
+          }
+        },       
+        methods: {
+          getAgenda180S (day) {            
+            if (this.class180S.reservations) {                            
+              let reservations = this.class180S.reservations.filter(r => r.startdate == day.date)
+              let result = reservations.reduce(function (r, a) {
+                  r[a.starttime] = r[a.starttime] || [];
+                  r[a.starttime].push(a);
+                  return r;
+              }, Object.create(null));                     
+              return result
+            }            
+          },
+          getAgenda190S (day) {            
+            if (this.class190S.reservations) {              
+              let reservations = this.class190S.reservations.filter(r => r.startdate == day.date)
+              let result = reservations.reduce(function (r, a) {
+                  r[a.starttime] = r[a.starttime] || [];
+                  r[a.starttime].push(a);
+                  return r;
+              }, Object.create(null));              
+              return result
+            }            
+          },
+          getAgenda200S (day) {            
+            if (this.class200S.reservations) {              
+              let reservations = this.class200S.reservations.filter(r => r.startdate == day.date)
+              let result = reservations.reduce(function (r, a) {
+                  r[a.starttime] = r[a.starttime] || [];
+                  r[a.starttime].push(a);
+                  return r;
+              }, Object.create(null));              
+              return result
+            }            
+          },
+          getColor(subject) {
+            let result = this.classColors.find(element => {
+              if(subject.toLowerCase().includes(element.name)) {
+                return element
+              }
+            })
+            if(result) {
+              return result.color
+            } else {
+              return 'bg-grey-5'
+            }
+          },
+          getClass(subject, length) {
+            let style = ''
+            let result = this.classColors.find(element => {
+              if(subject.toLowerCase().includes(element.name)) {
+                return element
+              }
+            })
+            if(result) {
+              style += result.color
+            } else {
+              style += 'bg-grey-5'
+            }
+            style += ' col-' + 12/length
+            return style
+          }
+        }        
+      })
+    </script>
+  </body>
+</html>
