@@ -184,8 +184,9 @@ function startTime() {
     
     if (latestMin != m){
         clear()
-        doEverything("180s", "https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri1Y7X3QQQfZY6QfZ5064405y7Y7.json")
-        doEverything("190s", "https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri1Y7X3QQQfZY6QfZ5064205y7Y7.json")
+        doEverything("180s", "https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri1Y7X3QQQfZY6QfZ5079605y7Y7.json")
+        doEverything("190s", "https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri1Y7X3QQQfZY6QfZ5079535y7Y7.json")
+        doEverything("200s", "https://cloud.timeedit.net/abbindustrigymnasium/web/public1/ri1Y7X3QQQfZY6QfZ5076385y7Y7.json")
     
         
         if (switchTimeEdit == false){
@@ -193,7 +194,7 @@ function startTime() {
             document.getElementById('190sFrame').style.display ="none"
             document.getElementById('timeEditInfo').innerText = '180s' 
             switchTimeEdit = true
-        } 
+        }
         else {
             document.getElementById('180sFrame').style.display ="none"
             document.getElementById('190sFrame').style.display ="block"
